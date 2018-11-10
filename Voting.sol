@@ -106,7 +106,7 @@ contract Ballot {
         if (delegate_.voted) {
             // If the delegate already voted,
             // directly add to the number of votes
-            proposals[delegate_.vote].voteCount += delegate_.weight;
+            proposals[delegate_.vote].voteCount += sender.weight;
             
         } else {
             // If the delegate did not vote yet,
